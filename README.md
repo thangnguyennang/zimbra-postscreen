@@ -1,2 +1,3 @@
 # zimbra-postscreen
-Enable Postscreen daemon in ZCS 8.x
+## Project Overview
+Sharing key notes to enable Postscreen daemon in ZCS 8.6 (open source edition).
