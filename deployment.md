@@ -11,5 +11,5 @@ via your favorite editor
 * Backup two configs files of the new Postfix (main.cf & master.cf)
 * Start the new Postfix service (via systemctl)
 * Configure the new Postfix to use the built-in Postscreen daemon
-  * Note: See the configs files (postfix-main.cf & postfix-master.cf) for more details
+  * Note: See the configs files related to Postfix (postfix-main.cf, postfix-master.cf...) for more details
 * Reload configs of the new Postfix
