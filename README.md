@@ -1,4 +1,4 @@
-# zimbra-postscreen
+# Zimbra-Postscreen
 ## Project Overview
 Sharing key notes to enable Postscreen daemon in ZCS 8.6 (open source edition).
 
@@ -13,5 +13,5 @@ and delays the onset of server overload conditions
 * For more details, go to the main page of Postscreen: http://www.postfix.org/POSTSCREEN_README.html
 
 ## Environment For Testing Postscreen
-* Zimbra version: 8.6 and above, 64-bit
+* Zimbra version: 8.6, 64-bit
 * OS: CentOS 7.x, 64-bit
