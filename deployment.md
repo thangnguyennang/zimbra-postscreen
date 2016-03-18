@@ -8,4 +8,6 @@ via your favorite editor
 * Restart the Zimbra MTA service
   * Note: After restarting, the Zimbra MTA service listened on port 125 on loopback interface
 * Install a new Postfix service (not Zimbra Postfix)
+* Backup two configs files of the new Postfix (main.cf & master.cf)
+* Start the new Postfix service (via systemctl)
 * Configure the new Postfix service to use the built-in Postscreen daemon
