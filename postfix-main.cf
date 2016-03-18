@@ -677,3 +677,32 @@ sample_directory = /usr/share/doc/postfix-2.10.1/samples
 # readme_directory: The location of the Postfix README files.
 #
 readme_directory = /usr/share/doc/postfix-2.10.1/README_FILES
+
+# Routing incoming messages to Zimbra Postfix
+virtual_mailbox_domains = /etc/postfix/virtual_domains
+transport_maps = hash:/etc/postfix/transport
+
+# Exclude broken clients by whitelisting. Clients in mynetworks
+# # should always be whitelisted.
+postscreen_access_list = permit_mynetworks, 
+     cidr:/etc/postfix/postscreen_access.cidr
+postscreen_blacklist_action = enforce
+
+# Postscreen DNSBL Sites
+# # Specify a list of domain=filter*weight entries, separated by comma or whitespace
+# # References: http://www.postfix.org/postconf.5.html#postscreen_dnsbl_sites
+postscreen_dnsbl_threshold = 2 
+postscreen_dnsbl_sites =
+         zen.spamhaus.org*2
+         b.barracudacentral.org*1
+         bl.spamcop.net*1
+         all.s5h.net*1
+         dnsbl-2.uceprotect.net*1
+         dnsbl-3.uceprotect.net*1
+postscreen_dnsbl_action = enforce
+postscreen_dnsbl_ttl    = 1h
+
+# Postscreen Pre-greeting Tests
+postscreen_greet_banner = $smtpd_banner
+postscreen_greet_wait = 6s
+postscreen_greet_action = drop
